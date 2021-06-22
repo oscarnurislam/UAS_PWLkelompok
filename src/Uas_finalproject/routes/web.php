@@ -12,7 +12,7 @@ use App\Http\Controllers\ServicesController;
 // use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\AboutController;
  //use App\Http\Controllers\ArticleController;
-
+// use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\ArticleController;
 use App\Models\Article;
 use App\Models\Artikel;
@@ -78,9 +78,13 @@ Route::get('/', function () {
 //Artikel
 Route::resource('articles', ArticleController::class);
 Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf']);
-//Route::resource('bab', ArtikelController::class);
+
+Route::get('/artikel',[ArtikelController::class,'index'])->name('artikel.index');
+Route::get('/create',[ArtikelController::class,'create'])->name('artikel.create');
 Route::resource('artikel', ArtikelController::class);
+
 Route::get('/rating/{artikel}', [ArtikelController::class,'hasil'])->name('artikel.rating');
+
 Route::get('/cari',[ArtikelController::class,'cari'])->name('artikel.cari');
 Route::get('/mahasiswa_pdf/{artikel}', [ArtikelController::class, 'cetak_pdf'])->name('artikel.cetak');
 

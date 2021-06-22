@@ -157,12 +157,12 @@ class ArtikelController extends Controller
     public function hasil($id)
     {   
         $artikel = artikel::find($id);
-        return view('artikel.khs',['artikel'=>$artikel]);
+        return view('artikel.tampilan_cetak',['artikel'=>$artikel]);
     }
 
     public function cetak_pdf($id){
         $artikel = artikel::find($id);
-        $pdf = PDF::loadview('artikel.mahasiswa_pdf',['mhs'=>$artikel]);
+        $pdf = PDF::loadview('artikel.cetak',['mhs'=>$artikel]);
         return $pdf->stream();
     }
 }

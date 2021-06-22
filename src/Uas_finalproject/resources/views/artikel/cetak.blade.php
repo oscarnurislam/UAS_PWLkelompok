@@ -16,13 +16,13 @@
 
     </style>
     <center>
-        <h3>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h3>
-            <br><h3>KARTU HASIL STUDI(KHS)</h3>
+        <h3>ARTIKEL TERBARU</h3>
+            <br><h3>CETAK ARTIKEL</h3>
     </center>
 
         <p><b>Judul : </b>{{ $mhs->judul }}
             <p><b>No_artikel : </b>{{ $mhs->no_artikel }}
-                <p><b>Kategori : </b>{{ $mhs->kelas->nama_kategori }}
+                <p><b>Kategori : </b>{{ $mhs->kategori->nama_kategori }}
 
     <table class="table">
         <thead class="thead-dark">

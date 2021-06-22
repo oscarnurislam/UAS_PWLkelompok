@@ -3,13 +3,13 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="mt-2" style="text-align: center">
-            <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
-            <br><h1>KARTU HASIL STUDI(KHS)</h1>
+            <h2>ARTIKEL TERBARU</h2>
+            <br><h1>CETAK ARTIKEL</h1>
         </div>
         <div class="card-body">
                 <p><b>Judul  : </b>{{ $artikel->judul }}
                 <p><b>No_artikel   : </b>{{ $artikel->no_artikel }}
-                <p><b>Kategori : </b>{{ $artikel->kelas->nama_kategori }}
+                <p><b>Kategori : </b>{{ $artikel->kategori->nama_kategori }}
         </div>
     </div>
 </div>

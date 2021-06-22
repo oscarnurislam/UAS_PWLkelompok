@@ -42,7 +42,7 @@
             <td>{{$Artikel->kategori->nama_kategori}}</td>
             <td>{{$Artikel->deskripsi}}</td>
             <td> 
-                <form action="{{route('artikel.destroy',$Artikel->id)}}" method="POST" onsubmit="return confirm('Anda yakin ingin menghapus data?')">
+                <form action="{{route('artikel.destroy',$Artikel->id)}}" method="DELETE" onsubmit="return confirm('Anda yakin ingin menghapus data?')">
                     <a class="btn btn-info" href="{{route('artikel.show',$Artikel->id)}}">Show</a>
                     <a class="btn btn-primary" href="{{route('artikel.edit',$Artikel->id)}}">Edit</a>
                     @csrf
